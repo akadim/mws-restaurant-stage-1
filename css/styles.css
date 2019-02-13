@@ -222,6 +222,10 @@ nav h1 a {
   text-transform: uppercase;
   line-height: 1.1;
 }
+.restaurant-info-wrapper {
+   display: flex;
+   flex-direction: row;
+}
 #restaurant-img {
 	width: 90%;
 }
@@ -245,7 +249,6 @@ nav h1 a {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
   padding: 50px 40px 30px;
-  width: 50%;
 }
 #reviews-container {
   padding: 30px 40px 80px;
@@ -270,40 +273,83 @@ nav h1 a {
   overflow: hidden;
   position: relative;
   width: 85%;
-  border-top-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
-#reviews-list li p:first-child {
-  color: white;
-  background: black;
-  padding: 12px;
-  display: inline-block;
-}
-
-#reviews-list li p:nth-child(2) {
-  color: white;
-  background: black;
-  padding: 12px;
-  display: inline-block;
-}
 #reviews-list li p {
   margin: 0 0 10px;
 }
+
 #restaurant-hours td {
   color: #666;
+}
+.review_header {
+  background: #333333;
+  overflow: auto;
+  padding: 20px 15px 5px;
+}
+
+.review_header p {
+  font-size: 16px;
+}
+
+.review_header p:first-child {
+  overflow: auto;
+  color: white;
+  display: inline-block;
+}
+
+.review_header p:nth-child(2) {
+  display: inline-block;
+  float: right;
+  color: #C9C9C9;
+  text-shadow: 2px 1px 0px #000;
+}
+
+.review_body {
+   padding: 10px;
+}
+
+.review_body p:first-child {
+  background: #FFA500;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  padding: 5px 10px;
+  text-transform: uppercase;
 }
 
 /* ====================== Responsive Design ====================== */
 @media only screen and (max-width: 597px) {
+  nav h1 a {
+    font-size: 12px;
+  }
+
   .filter-options select {
     width: 30%;
   }
 }
 
 @media only screen and (max-width: 468px) {
+  nav h1 a {
+    font-size: 12px;
+  }
+
   .filter-options select {
     width: 90%;
     display: block;
+  }
+}
+
+@media only screen and (max-width: 1216px) {
+  nav h1 a {
+    font-size: 12px;
+  }
+
+  .restaurant-info-wrapper {
+    display: flex;
+    flex-direction: column;
   }
 }
